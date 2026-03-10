@@ -1,8 +1,8 @@
-const Navbar = () => {
+const Navbar = ({title}) => {
     return(
         <nav>
             <h1>
-                projectHub
+                {title}
             </h1>
         </nav>
     )

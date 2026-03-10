@@ -1,4 +1,4 @@
-import Navbar from "./layout/Navbar.jsx"
+import Navbar from "./components/layout/Navbar.jsx"
 
 function App(){
     return(
