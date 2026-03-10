@@ -3,7 +3,7 @@ import Navbar from "./components/layout/Navbar.jsx"
 function App(){
     return(
         <div>
-            <Navbar />
+            <Navbar title={"ProjectHub Dashboard"}/>
             <div>
                 <main>
                     Welcome to the projectHub
