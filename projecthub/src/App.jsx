@@ -1,6 +1,7 @@
 import Navbar from "./components/layout/Navbar.jsx"
 import ProjectCard from "./components/projects/ProjectCard.jsx"
 
+// Our list of project data
 const initialProjects = [
     {id : 1, title : "Project 1", owner : "owner 1"},
     {id : 2, title : "Project 2", owner : "owner 2"},
@@ -18,8 +19,11 @@ function App(){
     return(
         <div>
             <Navbar title={"ProjectHub Dashboard"}/>
+
             <div>
-                <main>
+                <main style={{padding : '20px'}}>
+                    <h2>Welcome to the ProjectHub</h2>
+                    {/* We loop through the array and create a card for each item */}
                     {initialProjects.map((project) => (
                         <ProjectCard
                             key={project.id}
