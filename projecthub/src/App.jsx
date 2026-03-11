@@ -1,4 +1,5 @@
 import Navbar from "./components/layout/Navbar.jsx"
+import ProjectCard from "./components/projects/ProjectCard.jsx"
 
 const initialProjects = [
     {id : 1, title : "Project 1", owner : "owner 1"},
@@ -12,7 +13,13 @@ function App(){
             <Navbar title={"ProjectHub Dashboard"}/>
             <div>
                 <main>
-                    Welcome to the projectHub
+                    {initialProjects.map((project) => (
+                        <ProjectCard
+                            key={project.id}
+                            title={project.title}
+                            owner={project.owner}
+                        />
+                    ))}
                 </main>
             </div>
         </div>
