@@ -1,3 +1,5 @@
+import React from "react";
+import { useState } from "react";
 import Navbar from "./components/layout/Navbar.jsx"
 import ProjectCard from "./components/projects/ProjectCard.jsx"
 
@@ -16,6 +18,10 @@ const initialProjects = [
 ];
 
 function App(){
+
+    const [projects, setProjects] = useState(initialProjects);
+    const [searchItem, setSearchItem] = useState("");
+    
     return(
         <div>
             <Navbar title={"ProjectHub Dashboard"}/>
@@ -23,7 +29,18 @@ function App(){
             <div>
                 <main style={{padding : '20px'}}>
                     <h2>Welcome to the ProjectHub</h2>
+
+                    <input 
+                        type="text"
+                        placeholder="Search projects"
+                        value={searchItem}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                    >
+                    </input>
                     {/* We loop through the array and create a card for each item */}
+
+                    <h2>Projects</h2>
+
                     {initialProjects.map((project) => (
                         <ProjectCard
                             key={project.id}
